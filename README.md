@@ -1,4 +1,4 @@
-# one_big_script_rs
+# one_big_script
 
 Rust-версия `OneBigScript_v13.py`.
 
@@ -103,6 +103,7 @@ cargo test
 
 
 
+##Сборка под astra linux v1
 podman run --rm -it -v "$PWD:/src" -w /src docker.io/library/debian:buster bash
 
 cat > /etc/apt/sources.list <<'EOF'
@@ -133,31 +134,7 @@ strip target/release/onebigscript
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+##Сборка под astra linux v2
 podman run --rm -it \
     --network=host \
     -e http_proxy=http://127.0.0.1:10808 \
